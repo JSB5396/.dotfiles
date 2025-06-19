@@ -1,0 +1,12 @@
+font=Cascadia Code 11
+anchor=top-center
+
+# Colors
+
+background-color=#1c1e26
+text-color=#e0e0e0
+border-color=#16161c
+progress-color=over #313244
+
+[urgency=high]
+border-color=#e95678
