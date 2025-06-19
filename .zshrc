@@ -112,7 +112,6 @@ export PATH="$PATH:/usr/local/go/bin"
 
 # Aliases commands
 alias vi=nvim
-alias vim=nvim
 alias c='clear'
 alias ls='lsd'
 alias l='ls -l'
