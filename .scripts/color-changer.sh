@@ -82,7 +82,7 @@ sed -i "12 s/border-color=.*/border-color=#${regular1}/g" $mako
 #                     
 fuzzel=$HOME/.config/fuzzel/fuzzel.ini
 
-sed -i "s/background=.*/background=${background}fd/g" $fuzzel
+sed -i "s/background=.*/background=${background}ff/g" $fuzzel
 sed -i "s/text=.*/text=${foreground}ff/g" $fuzzel
 sed -i "52 s/prompt=.*/prompt=${regular7}ff/g" $fuzzel
 sed -i "s/input=.*/input=${foreground}ff/g" $fuzzel
