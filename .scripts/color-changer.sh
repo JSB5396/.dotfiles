@@ -84,7 +84,7 @@ fuzzel=$HOME/.config/fuzzel/fuzzel.ini
 
 sed -i "s/background=.*/background=${background}ff/g" $fuzzel
 sed -i "s/text=.*/text=${foreground}ff/g" $fuzzel
-sed -i "52 s/prompt=.*/prompt=${regular7}ff/g" $fuzzel
+sed -i "53 s/prompt=.*/prompt=${regular7}ff/g" $fuzzel
 sed -i "s/input=.*/input=${foreground}ff/g" $fuzzel
 sed -i "s/match=.*/match=${regular4}ff/g" $fuzzel
 sed -i "s/selection=.*/selection=${regular1}ff/g" $fuzzel
