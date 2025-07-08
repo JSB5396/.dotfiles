@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nvim'
+#   export EDITOR='hx'
 # else
 #   export EDITOR='nano'
 # fi
@@ -103,15 +103,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Preferred terminal text editor
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=hx
+export VISUAL=hx
 
 # Golang environment variables
 export PATH="$PATH:$HOME/go/bin/"
 export PATH="$PATH:/usr/local/go/bin"
 
 # Aliases commands
-alias vi=nvim
+alias vi=hx
 alias c='clear'
 alias ls='lsd'
 alias l='ls -l'
