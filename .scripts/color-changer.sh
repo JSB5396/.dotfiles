@@ -24,31 +24,50 @@ bright4=3fc4de
 bright5=f075b5
 bright6=6be4e6
 bright7=d5d8da
-            
-#__      __         _              
-#\ \    / /_ _ _  _| |__  __ _ _ _ 
-# \ \/\/ / _` | || | '_ \/ _` | '_|
-#  \_/\_/\__,_|\_, |_.__/\__,_|_|  
-#              |__/               
+
+#    _   _             _ _   _        
+#   /_\ | |__ _ __ _ _(_) |_| |_ _  _ 
+#  / _ \| / _` / _| '_| |  _|  _| || |
+# /_/ \_\_\__,_\__|_| |_|\__|\__|\_, |
+#                                |__/ 
 #
-waybar=$HOME/.config/waybar/style.css
+alacritty=$HOME/.config/alacritty/alacritty.toml
 
-sed -i "s/@define-color maincolor.*/@define-color maincolor #${regular4};/g" $waybar
-sed -i "s/@define-color accentcolor.*/@define-color accentcolor #${foreground};/g" $waybar
-sed -i "s/@define-color bgmodule.*/@define-color bgmodule #${regular0};/g" $waybar
-sed -i "s/@define-color background.*/@define-color background #${background};/g" $waybar
+sed -i "s/background =.*/background = '#${background}'/g" $alacritty
+sed -i "s/foreground =.*/foreground = '#${foreground}'/g" $alacritty
+sed -i "15 s/black =.*/black = '#${regular0}'/g" $alacritty
+sed -i "16 s/red =.*/red = '#${regular1}'/g" $alacritty
+sed -i "17 s/green =.*/green = '#${regular2}'/g" $alacritty
+sed -i "18 s/yellow =.*/yellow = '#${regular3}'/g" $alacritty
+sed -i "19 s/blue =.*/blue = '#${regular4}'/g" $alacritty
+sed -i "20 s/magenta =.*/magenta = '#${regular5}'/g" $alacritty
+sed -i "21 s/cyan =.*/cyan = '#${regular6}'/g" $alacritty
+sed -i "22 s/white =.*/white = '#${regular7}'/g" $alacritty
+sed -i "25 s/black =.*/black = '#${bright0}'/g" $alacritty
+sed -i "26 s/red =.*/red = '#${bright1}'/g" $alacritty
+sed -i "27 s/green =.*/green = '#${bright2}'/g" $alacritty
+sed -i "28 s/yellow =.*/yellow = '#${bright3}'/g" $alacritty
+sed -i "29 s/blue =.*/blue = '#${bright4}'/g" $alacritty
+sed -i "30 s/magenta =.*/magenta = '#${bright5}'/g" $alacritty
+sed -i "31 s/cyan =.*/cyan = '#${bright6}'/g" $alacritty
+sed -i "32 s/white =.*/white = '#${bright7}'/g" $alacritty           
 
-#__      ___                    _   
-#\ \    / / |___  __ _ ___ _  _| |_ 
-# \ \/\/ /| / _ \/ _` / _ \ || |  _|
-#  \_/\_/ |_\___/\__, \___/\_,_|\__|
-#                |___/              
-#
-wlogout=$HOME/.config/wlogout/style.css
+# ___               _ 
+#| __|  _ _________| |
+#| _| || |_ /_ / -_) |
+#|_| \_,_/__/__\___|_|
+#                     
+fuzzel=$HOME/.config/fuzzel/fuzzel.ini
 
-sed -i "s/@define-color selectcolor.*/@define-color selectcolor #${regular0};/g" $wlogout
-sed -i "s/@define-color textcolor.*/@define-color textcolor #${regular4};/g" $wlogout
-sed -i "s/@define-color bgcolor.*/@define-color bgcolor #${background};/g" $wlogout
+sed -i "s/background=.*/background=${background}ff/g" $fuzzel
+sed -i "s/text=.*/text=${foreground}ff/g" $fuzzel
+sed -i "53 s/prompt=.*/prompt=${regular7}ff/g" $fuzzel
+sed -i "s/input=.*/input=${foreground}ff/g" $fuzzel
+sed -i "s/match=.*/match=${regular4}ff/g" $fuzzel
+sed -i "s/selection=.*/selection=${regular1}ff/g" $fuzzel
+sed -i "s/selection-text=.*/selection-text=${regular0}ff/g" $fuzzel
+sed -i "s/selection-match=.*/selection-match=${regular7}ff/g" $fuzzel
+sed -i "s/border=.*/border=${regular0}ff/g" $fuzzel
 
 # _  _               _         _   
 #| || |_  _ _ __ _ _| |___  __| |__
@@ -75,49 +94,6 @@ sed -i "s/text-color=.*/text-color=#${foreground}/g" $mako
 sed -i "8 s/border-color=.*/border-color=#${regular0}/g" $mako
 sed -i "12 s/border-color=.*/border-color=#${regular1}/g" $mako
 
-# ___               _ 
-#| __|  _ _________| |
-#| _| || |_ /_ / -_) |
-#|_| \_,_/__/__\___|_|
-#                     
-fuzzel=$HOME/.config/fuzzel/fuzzel.ini
-
-sed -i "s/background=.*/background=${background}ff/g" $fuzzel
-sed -i "s/text=.*/text=${foreground}ff/g" $fuzzel
-sed -i "53 s/prompt=.*/prompt=${regular7}ff/g" $fuzzel
-sed -i "s/input=.*/input=${foreground}ff/g" $fuzzel
-sed -i "s/match=.*/match=${regular4}ff/g" $fuzzel
-sed -i "s/selection=.*/selection=${regular1}ff/g" $fuzzel
-sed -i "s/selection-text=.*/selection-text=${regular0}ff/g" $fuzzel
-sed -i "s/selection-match=.*/selection-match=${regular7}ff/g" $fuzzel
-sed -i "s/border=.*/border=${regular0}ff/g" $fuzzel
-
-# ___         _   
-#| __|__  ___| |_ 
-#| _/ _ \/ _ \  _|
-#|_|\___/\___/\__|
-#
-foot=$HOME/.config/foot/foot.ini
-
-sed -i "s/background=.*/background=${background}/g" $foot
-sed -i "s/foreground=.*/foreground=${foreground}/g" $foot
-sed -i "s/regular0=.*/regular0=${regular0}  # black/g" $foot
-sed -i "s/regular1=.*/regular1=${regular1}  # red/g" $foot
-sed -i "s/regular2=.*/regular2=${regular2}  # green/g" $foot
-sed -i "s/regular3=.*/regular3=${regular3}  # yellow/g" $foot
-sed -i "s/regular4=.*/regular4=${regular4}  # blue/g" $foot
-sed -i "s/regular5=.*/regular5=${regular5}  # magenta/g" $foot
-sed -i "s/regular6=.*/regular6=${regular6}  # cyan/g" $foot
-sed -i "s/regular7=.*/regular7=${regular7}  # white/g" $foot
-sed -i "s/bright0=.*/bright0=${bright0}   # bright black/g" $foot
-sed -i "s/bright1=.*/bright1=${bright1}   # bright red/g" $foot
-sed -i "s/bright2=.*/bright2=${bright2}   # bright green/g" $foot
-sed -i "s/bright3=.*/bright3=${bright3}   # bright yellow/g" $foot
-sed -i "s/bright4=.*/bright4=${bright4}   # bright blue/g" $foot
-sed -i "s/bright5=.*/bright5=${bright5}   # bright magenta/g" $foot
-sed -i "s/bright6=.*/bright6=${bright6}   # bright cyan/g" $foot
-sed -i "s/bright7=.*/bright7=${bright7}   # bright white/g" $foot
-
 # _  _ _     _ 
 #| \| (_)_ _(_)
 #| .` | | '_| |
@@ -130,6 +106,31 @@ sed -i 's/active-color.*/active-color "#'"$regular0"'"/g' $niri
 sed -i 's/inactive-color.*/inactive-color "#'"$background"'"/g' $niri
 sed -i 's/urgent-color.*/urgent-color "#'"$regular1"'"/g' $niri
 sed -i 's/backdrop-color.*/backdrop-color "#'"$background"'"/g' $niri
+
+#__      __         _              
+#\ \    / /_ _ _  _| |__  __ _ _ _ 
+# \ \/\/ / _` | || | '_ \/ _` | '_|
+#  \_/\_/\__,_|\_, |_.__/\__,_|_|  
+#              |__/               
+#
+waybar=$HOME/.config/waybar/style.css
+
+sed -i "s/@define-color maincolor.*/@define-color maincolor #${regular4};/g" $waybar
+sed -i "s/@define-color accentcolor.*/@define-color accentcolor #${foreground};/g" $waybar
+sed -i "s/@define-color bgmodule.*/@define-color bgmodule #${regular0};/g" $waybar
+sed -i "s/@define-color background.*/@define-color background #${background};/g" $waybar
+
+#__      ___                    _   
+#\ \    / / |___  __ _ ___ _  _| |_ 
+# \ \/\/ /| / _ \/ _` / _ \ || |  _|
+#  \_/\_/ |_\___/\__, \___/\_,_|\__|
+#                |___/              
+#
+wlogout=$HOME/.config/wlogout/style.css
+
+sed -i "s/@define-color selectcolor.*/@define-color selectcolor #${regular0};/g" $wlogout
+sed -i "s/@define-color textcolor.*/@define-color textcolor #${regular4};/g" $wlogout
+sed -i "s/@define-color bgcolor.*/@define-color bgcolor #${background};/g" $wlogout
 
 # ____         
 #|_  /___ _ _  
