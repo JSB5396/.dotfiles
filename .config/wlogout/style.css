@@ -1,0 +1,68 @@
+/*
+          _                         _    
+__      _| | ___   __ _  ___  _   _| |_  
+\ \ /\ / / |/ _ \ / _` |/ _ \| | | | __| 
+ \ V  V /| | (_) | (_| | (_) | |_| | |_  
+  \_/\_/ |_|\___/ \__, |\___/ \__,_|\__| 
+                  |___/                   
+*/
+
+@define-color selectcolor #16161c;
+@define-color textcolor #26bbd9;
+@define-color bgcolor #1c1e26;
+
+* {
+    font-family: "Cascadia Code Regular", Helvetica, sans-serif;
+    background-image: none;
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+window {
+    background-color: transparent;
+}
+
+button {
+    color: @textcolor;
+    border-color: @selectcolor;
+    background-color: @bgcolor;
+    border-width: 2px;
+    border-radius: 0px;
+    border-style: solid;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button:focus, button:active, button:hover {
+    opacity: 1.0;
+    outline-style: none;
+    background-color: @selectcolor;
+}
+
+/* -----------------------------------------------------
+ * Buttons
+ * ----------------------------------------------------- */
+
+#lock, #logout, #shutdown, #reboot {
+    border-width: 2 1 2 1;
+}
+
+#lock {
+    border-width: 2 1 2 2;
+    background-image: image(url("icons/lock.svg"));
+}
+
+#logout {
+    background-image: image(url("icons/logout.svg"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.svg"));
+}
+
+#reboot {
+    border-width: 2 2 2 1;
+    background-image: image(url("icons/reboot.svg"));
+}
