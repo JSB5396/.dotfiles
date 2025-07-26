@@ -1,7 +1,12 @@
-
 # Start Niri if there is no Display and we are on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
     exec niri-session
+fi
+
+# Start ssh-agent if it is not running and add keys
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
 fi
 
 # If you come from bash you might have to change your $PATH.
